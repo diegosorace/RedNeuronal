@@ -1,0 +1,27 @@
+{
+  "capaEntrada":
+  {
+    "cantidadEntradas":1,
+    "valorMaximoEntrada":100,
+    "valorMinimoEntrada":0
+  },
+  "capaSalida":
+  {
+    "cantidadSalidas":7,
+    "valorMaximoSalida":1,
+    "valorMinimoSalida":0
+  },
+  "capaOculta":
+  {
+    "cantidadCapas":2,
+    "cantidadNeuronasPorCapa":8
+  },
+  "cargarRedNeuronal":false,
+  "guardarRedNeuronal":true,
+  "direccionDatosEntrada": "c:/input.txt",
+  "direccionDatosSalida": "c:/output.txt",
+  "direccionRedNeuronal": "c:/neuron.bin",
+  "alpha":0.005,
+  "errorMax":0.01,
+  "iteracionesDeEntrenamiento":50000000
+}
