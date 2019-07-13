@@ -11,4 +11,8 @@
     <PackageReference Include="System.Json" Version="4.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Ejemplos\" />
+  </ItemGroup>
+
 </Project>
