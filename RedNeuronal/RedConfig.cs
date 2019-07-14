@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RedNeuronal
+﻿namespace RedNeuronal
 {
     public class RedConfig
     {
@@ -19,6 +15,6 @@ namespace RedNeuronal
 
         public double alpha;
         public double errorMax;
-        public int iteracionesDeEntrenamiento;
+        public long iteracionesDeEntrenamiento;
     }
 }

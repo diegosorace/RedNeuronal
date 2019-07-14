@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Json;
@@ -10,7 +9,7 @@ namespace RedNeuronal
     {
         static void Main(string[] args)
         {
-            var configuration = JsonObject.Load(new System.IO.FileStream($"{Environment.CurrentDirectory}/config.json",System.IO.FileMode.Open));
+            var configuration = JsonValue.Load(new System.IO.FileStream($"{Environment.CurrentDirectory}/config.json",System.IO.FileMode.Open));
 
             RedConfig redConfig = new RedConfig
             {
@@ -40,13 +39,14 @@ namespace RedNeuronal
                 direccionRedNeuronal = configuration["direccionRedNeuronal"],
                 alpha = double.Parse(configuration["alpha"].ToString(), CultureInfo.InvariantCulture),
                 errorMax = double.Parse(configuration["errorMax"].ToString(), CultureInfo.InvariantCulture),
-                iteracionesDeEntrenamiento = int.Parse(configuration["iteracionesDeEntrenamiento"].ToString(), CultureInfo.InvariantCulture)
+                iteracionesDeEntrenamiento = long.Parse(configuration["iteracionesDeEntrenamiento"].ToString(), CultureInfo.InvariantCulture)
             };
             
             Red red = new Red
             (
                 redConfig
             );
+
             red.Ejecutar();
         }
     }

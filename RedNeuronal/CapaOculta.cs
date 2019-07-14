@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace RedNeuronal
+﻿namespace RedNeuronal
 {
     public class CapaOculta
     {

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace RedNeuronal
 {
@@ -47,7 +46,7 @@ namespace RedNeuronal
             }
             return err;
         }
-        public bool Entrenar(List<double[]> salidas, List<double[]> salidaDeseada, double alpha, double errorMaximo, int iteracinesMaximas)
+        public bool Entrenar(List<double[]> salidas, List<double[]> salidaDeseada, double alpha, double errorMaximo, long iteracinesMaximas)
         {
             double err = 99999;
             var timer = 0;
@@ -78,16 +77,12 @@ namespace RedNeuronal
                     Console.WriteLine($"Erro actual: {err}, Error esprado: {errorMaximo} Cuando los valores sean cercanos estara Lista para usar.");
                     Console.WriteLine($"Iteraciones restantes: {iteracinesMaximas}");
                 }
-                
-                
-                //Console.WriteLine( (err * 100) / errorMaximo );
             }
             return true;
         }
 
         List<double[]> sigmas;
         List<double[,]> deltas;
-
         void SetSigmas(double[] salidaDeseada)
         {
             sigmas = new List<double[]>();

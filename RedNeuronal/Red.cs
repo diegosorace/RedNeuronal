@@ -22,7 +22,7 @@ namespace RedNeuronal
 
         readonly double _alpha;
         readonly double _errorMax;
-        readonly int _iteracionesDeEntrenamiento;
+        readonly long _iteracionesDeEntrenamiento;
 
         public Red(RedConfig redConfig)
         {
@@ -101,9 +101,6 @@ namespace RedNeuronal
 
                 Console.WriteLine("");
             }
-
-            
-
         }
         public void Ejecutar()
         {
